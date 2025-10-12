@@ -47,9 +47,9 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 to-white py-16 sm:py-20 lg:py-32 xl:py-40">
+      <section className="relative bg-gradient-to-br from-blue-50 via-cyan-50 to-white py-16 sm:py-20 lg:py-32 xl:py-40">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center justify-items-center lg:justify-items-start">
             {/* Hero Text */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -141,7 +141,7 @@ export default function Home() {
       </section>
 
       {/* Price Callout Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-accent to-accent-light">
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-cyan-600 to-blue-600">
         <Container>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -151,10 +151,10 @@ export default function Home() {
             className="text-center text-white max-w-4xl mx-auto"
           >
             <div className="text-6xl lg:text-8xl mb-6 lg:mb-8">☕</div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 lg:mb-8">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 lg:mb-8 text-white">
               All at the price of a coffee
             </h2>
-            <p className="text-lg sm:text-xl lg:text-2xl opacity-95 leading-relaxed">
+            <p className="text-lg sm:text-xl lg:text-2xl opacity-95 leading-relaxed text-white">
               But delivering something much greater: an opportunity to keep your body in motion
             </p>
           </motion.div>
@@ -206,7 +206,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-16 sm:py-20 lg:py-28 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="py-16 sm:py-20 lg:py-28 bg-gradient-to-br from-blue-600 via-cyan-600 to-blue-700 text-white">
         <Container>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -215,18 +215,18 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 lg:mb-8">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 lg:mb-8 text-white">
               Ready to Start Moving?
             </h2>
-            <p className="text-lg sm:text-xl lg:text-2xl mb-8 lg:mb-12 opacity-95 leading-relaxed">
+            <p className="text-lg sm:text-xl lg:text-2xl mb-8 lg:mb-12 opacity-95 leading-relaxed text-white">
               Join the first wave of SkyGlider users and take a step towards a more dynamic lifestyle.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
               <Button 
                 href="https://www.tiktok.com/@skyglider" 
                 variant="primary" 
                 size="large"
-                className="bg-white text-primary hover:bg-gray-100"
+                className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto"
               >
                 Shop Now on TikTok
               </Button>
@@ -234,7 +234,7 @@ export default function Home() {
                 href="/product" 
                 variant="outline" 
                 size="large"
-                className="border-white text-white hover:bg-white hover:text-primary"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 w-full sm:w-auto"
               >
                 Learn More About Product
               </Button>

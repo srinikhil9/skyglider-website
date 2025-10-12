@@ -2,12 +2,20 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --primary: #3b82f6;
-  --primary-dark: #2563eb;
-  --secondary: #64748b;
-  --accent: #f97316;
-  --accent-light: #fb923c;
+  --foreground: #1e293b;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #3b82f6;
+  --secondary: #475569;
+  --secondary-light: #64748b;
+  --accent: #0891b2;
+  --accent-dark: #0e7490;
+  --accent-light: #06b6d4;
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
 }
 
 @theme inline {
@@ -15,9 +23,17 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
   --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
   --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
   --color-accent-light: var(--accent-light);
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
   --font-sans: system-ui, -apple-system, sans-serif;
 }
 

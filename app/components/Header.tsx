@@ -18,9 +18,9 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
       <Container>
-        <nav className="flex items-center justify-between py-5 lg:py-6">
+        <nav className="flex items-center justify-between py-4 lg:py-5">
           {/* Logo/Brand */}
           <Link href="/" className="text-2xl font-bold text-primary hover:text-primary-dark transition-colors">
             SkyGlider

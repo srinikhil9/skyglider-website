@@ -74,7 +74,7 @@ export default function ProductPage() {
   ];
 
   return (
-    <div className="py-12 sm:py-16 lg:py-20">
+    <div className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-blue-50 to-white">
       <Container>
         {/* Product Header */}
         <motion.div
@@ -255,20 +255,20 @@ export default function ProductPage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-accent to-accent-light rounded-2xl p-8 sm:p-12 text-center text-white"
+          className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-8 sm:p-12 lg:p-16 text-center text-white shadow-xl"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6 text-white">
             Start Your Movement Journey Today
           </h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl lg:text-2xl mb-8 lg:mb-10 opacity-95 max-w-2xl mx-auto leading-relaxed">
             Join the growing community of people choosing to stay active, no matter where they are.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
             <Button 
               href="https://www.tiktok.com/@skyglider"
               variant="primary"
               size="large"
-              className="bg-white text-accent hover:bg-gray-100"
+              className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto"
             >
               Shop on TikTok
             </Button>
@@ -276,7 +276,7 @@ export default function ProductPage() {
               href="/how-to-use"
               variant="outline"
               size="large"
-              className="border-white text-white hover:bg-white hover:text-accent"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 w-full sm:w-auto"
             >
               Learn How to Use
             </Button>
