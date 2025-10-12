@@ -1,103 +1,247 @@
-import Image from "next/image";
+'use client';
+
+import React from 'react';
+import { BoltIcon, GlobeAltIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
+import Container from './components/Container';
+import Button from './components/Button';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [benefitsRef, benefitsInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [featuresRef, featuresInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  const benefits = [
+    {
+      icon: BoltIcon,
+      title: 'Simple Setup',
+      description: 'No complicated setup, no learning curve. Just attach to your shoe and roll with it.',
+    },
+    {
+      icon: GlobeAltIcon,
+      title: 'Travel-Friendly',
+      description: 'Compact and portable. Perfect for flights, office desks, or anywhere you sit.',
+    },
+    {
+      icon: ArrowPathIcon,
+      title: 'Keep Moving',
+      description: 'Combat sedentary lifestyle effortlessly. Keep your legs moving throughout the day.',
+    },
+  ];
+
+  const features = [
+    {
+      title: 'Adjustable Fit',
+      description: 'Built-in screw knob mechanism adjusts to any shoe size for a perfect, secure fit.',
+    },
+    {
+      title: 'Smooth Rolling',
+      description: 'Experience effortless back-and-forth or lateral motion for natural, fluid movement.',
+    },
+    {
+      title: 'Portable Design',
+      description: 'Lightweight and compact. Slip it in your bag and take movement anywhere.',
+    },
+  ];
+
+  return (
+    <div>
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-50 to-white py-16 sm:py-20 lg:py-32 xl:py-40">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
+            {/* Hero Text */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 lg:mb-8 leading-tight">
+                Move Effortlessly,
+                <span className="text-primary"> Anywhere You Sit</span>
+              </h1>
+              <p className="text-lg sm:text-xl lg:text-2xl text-secondary mb-8 lg:mb-10 leading-relaxed max-w-2xl">
+                A simple tool designed to bring effortless movement into your daily routine. 
+                Keep your body in motion, no matter where you are.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  href="https://www.tiktok.com/@skyglider" 
+                  variant="primary" 
+                  size="large"
+                >
+                  Shop on TikTok
+                </Button>
+                <Button 
+                  href="#benefits" 
+                  variant="outline" 
+                  size="large"
+                >
+                  Learn More
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* Hero Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="/images/Men_s Casual Shoe with SG.jpg" 
+                  alt="SkyGlider on casual shoe"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Benefits Section */}
+      <section id="benefits" className="py-16 sm:py-20 lg:py-28 bg-white" ref={benefitsRef}>
+        <Container>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={benefitsInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12 sm:mb-16 lg:mb-20"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 lg:mb-6">
+              Why SkyGlider?
+            </h2>
+            <p className="text-lg sm:text-xl lg:text-2xl text-secondary max-w-3xl mx-auto">
+              Simple, effective, and designed for your dynamic lifestyle
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 xl:gap-12">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 30 }}
+                animate={benefitsInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white border border-gray-200 rounded-2xl p-8 lg:p-10 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <benefit.icon className="h-14 w-14 lg:h-16 lg:w-16 text-primary mb-6" />
+                <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
+                  {benefit.title}
+                </h3>
+                <p className="text-base lg:text-lg text-secondary leading-relaxed">
+                  {benefit.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Price Callout Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-accent to-accent-light">
+        <Container>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center text-white max-w-4xl mx-auto"
           >
-            Read our docs
-          </a>
+            <div className="text-6xl lg:text-8xl mb-6 lg:mb-8">☕</div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 lg:mb-8">
+              All at the price of a coffee
+            </h2>
+            <p className="text-lg sm:text-xl lg:text-2xl opacity-95 leading-relaxed">
+              But delivering something much greater: an opportunity to keep your body in motion
+            </p>
+          </motion.div>
+        </Container>
+      </section>
+
+      {/* Features Overview Section */}
+      <section className="py-16 sm:py-20 lg:py-28 bg-gray-50" ref={featuresRef}>
+        <Container>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={featuresInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12 sm:mb-16 lg:mb-20"
+          >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 lg:mb-6">
+              How It Works
+            </h2>
+            <p className="text-lg sm:text-xl lg:text-2xl text-secondary max-w-3xl mx-auto">
+              Four simple steps to get moving
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 mb-12 lg:mb-16">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 30 }}
+                animate={featuresInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white rounded-xl p-8 lg:p-10 shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
+                <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-base lg:text-lg text-secondary leading-relaxed">
+                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button href="/how-to-use" variant="primary" size="large">
+              See Full Guide
+            </Button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </Container>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="py-16 sm:py-20 lg:py-28 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+        <Container>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 lg:mb-8">
+              Ready to Start Moving?
+            </h2>
+            <p className="text-lg sm:text-xl lg:text-2xl mb-8 lg:mb-12 opacity-95 leading-relaxed">
+              Join the first wave of SkyGlider users and take a step towards a more dynamic lifestyle.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                href="https://www.tiktok.com/@skyglider" 
+                variant="primary" 
+                size="large"
+                className="bg-white text-primary hover:bg-gray-100"
+              >
+                Shop Now on TikTok
+              </Button>
+              <Button 
+                href="/product" 
+                variant="outline" 
+                size="large"
+                className="border-white text-white hover:bg-white hover:text-primary"
+              >
+                Learn More About Product
+              </Button>
+            </div>
+          </motion.div>
+        </Container>
+      </section>
     </div>
   );
 }
