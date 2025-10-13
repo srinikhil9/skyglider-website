@@ -63,10 +63,10 @@ export default function HowToUsePage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Getting Started with SkyGlider
           </h1>
-          <p className="text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Follow these simple steps to start bringing effortless movement into your daily routine. 
             No complicated setup required!
           </p>
@@ -92,10 +92,10 @@ export default function HowToUsePage() {
                       {step.number}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-foreground mb-3">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3">
                         {step.title}
                       </h3>
-                      <p className="text-secondary leading-relaxed text-lg">
+                      <p className="text-gray-700 leading-relaxed text-lg">
                         {step.description}
                       </p>
                     </div>
@@ -107,7 +107,7 @@ export default function HowToUsePage() {
                   <div className="aspect-square bg-gradient-to-br from-blue-50 to-white rounded-2xl flex items-center justify-center border-2 border-gray-200">
                     <div className="text-center">
                       <div className="text-8xl mb-4">{step.icon}</div>
-                      <p className="text-secondary font-medium">Step {step.number} Illustration</p>
+                      <p className="text-gray-700 font-medium">Step {step.number} Illustration</p>
                     </div>
                   </div>
                 </div>
@@ -126,7 +126,7 @@ export default function HowToUsePage() {
           >
             <div className="flex items-center gap-3 mb-6">
               <LightBulbIcon className="h-8 w-8 text-accent" />
-              <h2 className="text-3xl font-bold text-foreground">
+              <h2 className="text-3xl font-bold text-gray-900">
                 Tips for Best Experience
               </h2>
             </div>
@@ -140,7 +140,7 @@ export default function HowToUsePage() {
                   className="flex items-start gap-3"
                 >
                   <CheckIcon className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-secondary text-lg leading-relaxed">{tip}</span>
+                  <span className="text-gray-700 text-lg leading-relaxed">{tip}</span>
                 </motion.li>
               ))}
             </ul>
@@ -158,7 +158,7 @@ export default function HowToUsePage() {
           >
             <div className="flex items-center gap-3 mb-6">
               <ExclamationTriangleIcon className="h-8 w-8 text-amber-600" />
-              <h2 className="text-3xl font-bold text-foreground">
+              <h2 className="text-3xl font-bold text-gray-900">
                 Safety Guidelines
               </h2>
             </div>
@@ -166,11 +166,11 @@ export default function HowToUsePage() {
               {safetyGuidelines.map((guideline, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-amber-600 rounded-full flex-shrink-0 mt-2"></div>
-                  <span className="text-secondary text-lg leading-relaxed">{guideline}</span>
+                  <span className="text-gray-700 text-lg leading-relaxed">{guideline}</span>
                 </li>
               ))}
             </ul>
-            <p className="text-sm text-secondary italic border-t border-amber-200 pt-6">
+            <p className="text-sm text-gray-700 italic border-t border-amber-200 pt-6">
               <strong>Important:</strong> SkyGlider is a tool for movement and leg comfort during long periods 
               of sedentariness, not a medical device. Natural, fluid movement works best.
             </p>
@@ -186,13 +186,13 @@ export default function HowToUsePage() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Watch It in Action
             </h2>
             <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center border-2 border-gray-300">
               <div className="text-center">
                 <div className="text-6xl mb-4">🎥</div>
-                <p className="text-secondary font-medium text-lg">Demo Video Coming Soon</p>
+                <p className="text-gray-700 font-medium text-lg">Demo Video Coming Soon</p>
               </div>
             </div>
           </motion.div>

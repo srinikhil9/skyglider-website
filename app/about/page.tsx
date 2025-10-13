@@ -43,10 +43,10 @@ export default function AboutPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             About SkyGlider
           </h1>
-          <p className="text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Bringing effortless movement into every moment of your day
           </p>
         </motion.div>
@@ -60,8 +60,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-6">Our Story</h2>
-            <div className="space-y-4 text-lg text-secondary leading-relaxed">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
+            <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
               <p>
                 In today\'s world, we spend more time sitting than ever before. Whether it\'s long flights, 
                 desk jobs, or study sessions, our bodies crave movement even when we can\'t get up and walk around.
@@ -88,12 +88,12 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 sm:p-12"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-6 text-center">Our Mission</h2>
-            <p className="text-xl text-secondary leading-relaxed text-center max-w-3xl mx-auto mb-6">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Our Mission</h2>
+            <p className="text-xl text-gray-700 leading-relaxed text-center max-w-3xl mx-auto mb-6">
               To bring effortless movement into daily routines and empower people to live more dynamic, 
               active lives—no matter where they are or what they\'re doing.
             </p>
-            <p className="text-lg text-secondary leading-relaxed text-center max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
               We envision a world where maintaining an active lifestyle is as simple as sitting down with 
               your SkyGlider.
             </p>
@@ -132,8 +132,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-6">Our Pricing Philosophy</h2>
-            <div className="space-y-4 text-lg text-secondary leading-relaxed">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Pricing Philosophy</h2>
+            <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
               <p>
                 We set SkyGlider at the price of a coffee because we believe movement should be accessible 
                 to everyone. We\'re not focused on maximizing profits—we\'re focused on maximizing impact.
@@ -158,8 +158,8 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-4">Our Values</h2>
-            <p className="text-xl text-secondary max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
           </motion.div>
@@ -174,10 +174,10 @@ export default function AboutPage() {
                 className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300"
               >
                 <value.icon className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-bold text-foreground mb-3">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {value.title}
                 </h3>
-                <p className="text-secondary leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   {value.description}
                 </p>
               </motion.div>
@@ -194,8 +194,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-6">What\'s Next</h2>
-            <div className="space-y-4 text-lg text-secondary leading-relaxed">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">What\'s Next</h2>
+            <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
               <p>
                 This is just the beginning. We have exciting plans for future versions of SkyGlider, 
                 including potential new features, enhanced materials, and even expanded product lines.

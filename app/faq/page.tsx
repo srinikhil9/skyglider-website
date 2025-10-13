@@ -161,10 +161,10 @@ export default function FAQPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Frequently Asked Questions
           </h1>
-          <p className="text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Find answers to common questions about SkyGlider. Can't find what you're looking for? 
             Feel free to contact us!
           </p>
@@ -179,7 +179,7 @@ export default function FAQPage() {
               animate={categoriesInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
             >
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                 {category.title}
               </h2>
               <div className="space-y-4">

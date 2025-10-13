@@ -56,11 +56,11 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 lg:mb-8 leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 lg:mb-8 leading-tight">
                 Move Effortlessly,
-                <span className="text-primary"> Anywhere You Sit</span>
+                <span className="text-primary block sm:inline mt-2 sm:mt-0"> Anywhere You Sit</span>
               </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl text-secondary mb-8 lg:mb-10 leading-relaxed max-w-2xl">
+              <p className="text-xl sm:text-2xl lg:text-3xl text-gray-700 mb-8 lg:mb-10 leading-relaxed max-w-2xl font-medium">
                 A simple tool designed to bring effortless movement into your daily routine. 
                 Keep your body in motion, no matter where you are.
               </p>
@@ -110,10 +110,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-16 lg:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 lg:mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6">
               Why SkyGlider?
             </h2>
-            <p className="text-lg sm:text-xl lg:text-2xl text-secondary max-w-3xl mx-auto">
+            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-700 max-w-3xl mx-auto font-medium">
               Simple, effective, and designed for your dynamic lifestyle
             </p>
           </motion.div>
@@ -128,10 +128,10 @@ export default function Home() {
                 className="bg-white border border-gray-200 rounded-2xl p-8 lg:p-10 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
                 <benefit.icon className="h-14 w-14 lg:h-16 lg:w-16 text-primary mb-6" />
-                <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-4">
                   {benefit.title}
                 </h3>
-                <p className="text-base lg:text-lg text-secondary leading-relaxed">
+                <p className="text-base lg:text-lg xl:text-xl text-gray-700 leading-relaxed">
                   {benefit.description}
                 </p>
               </motion.div>
@@ -170,10 +170,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-16 lg:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 lg:mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6">
               How It Works
             </h2>
-            <p className="text-lg sm:text-xl lg:text-2xl text-secondary max-w-3xl mx-auto">
+            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-700 max-w-3xl mx-auto font-medium">
               Four simple steps to get moving
             </p>
           </motion.div>
@@ -187,10 +187,10 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-xl p-8 lg:p-10 shadow-md hover:shadow-lg transition-shadow duration-300"
               >
-                <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-base lg:text-lg text-secondary leading-relaxed">
+                <p className="text-base lg:text-lg xl:text-xl text-gray-700 leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>

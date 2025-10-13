@@ -111,10 +111,10 @@ export default function ContactPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Get in Touch
           </h1>
-          <p className="text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Have a question, feedback, or just want to say hi? We'd love to hear from you!
           </p>
         </motion.div>
@@ -130,10 +130,10 @@ export default function ContactPage() {
               {status === 'success' ? (
                 <div className="text-center py-12">
                   <CheckCircleIcon className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
                     Message Sent Successfully!
                   </h3>
-                  <p className="text-secondary mb-6">
+                  <p className="text-gray-700 mb-6">
                     Thank you for reaching out. We'll get back to you within 24-48 hours.
                   </p>
                   <Button onClick={() => setStatus('idle')} variant="primary">
@@ -144,7 +144,7 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Field */}
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
+                    <label htmlFor="name" className="block text-sm font-semibold text-gray-900 mb-2">
                       Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -165,7 +165,7 @@ export default function ContactPage() {
 
                   {/* Email Field */}
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">
+                    <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-2">
                       Email <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -186,7 +186,7 @@ export default function ContactPage() {
 
                   {/* Subject Field */}
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-semibold text-foreground mb-2">
+                    <label htmlFor="subject" className="block text-sm font-semibold text-gray-900 mb-2">
                       Subject
                     </label>
                     <select
@@ -205,7 +205,7 @@ export default function ContactPage() {
 
                   {/* Message Field */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-2">
+                    <label htmlFor="message" className="block text-sm font-semibold text-gray-900 mb-2">
                       Message <span className="text-red-500">*</span>
                     </label>
                     <textarea
@@ -259,7 +259,7 @@ export default function ContactPage() {
           >
             {/* Alternative Contact Methods */}
             <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-gray-200">
-              <h3 className="text-2xl font-bold text-foreground mb-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Other Ways to Reach Us
               </h3>
               
@@ -267,7 +267,7 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4">
                   <EnvelopeIcon className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-semibold text-foreground mb-1">Email</p>
+                    <p className="font-semibold text-gray-900 mb-1">Email</p>
                     <a
                       href="mailto:hello@theskyglider.com"
                       className="text-primary hover:text-primary-dark transition-colors"
@@ -280,7 +280,7 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4">
                   <div className="text-2xl">📱</div>
                   <div>
-                    <p className="font-semibold text-foreground mb-1">Social Media</p>
+                    <p className="font-semibold text-gray-900 mb-1">Social Media</p>
                     <a
                       href="https://www.tiktok.com/@skyglider"
                       target="_blank"
@@ -305,10 +305,10 @@ export default function ContactPage() {
 
             {/* FAQ Link */}
             <div className="bg-amber-50 border border-amber-200 rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-foreground mb-3">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Looking for Quick Answers?
               </h3>
-              <p className="text-secondary mb-4">
+              <p className="text-gray-700 mb-4">
                 Check out our FAQ page for answers to commonly asked questions.
               </p>
               <Button href="/faq" variant="outline">

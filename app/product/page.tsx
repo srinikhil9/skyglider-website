@@ -83,10 +83,10 @@ export default function ProductPage() {
           transition={{ duration: 0.6 }}
           className="mb-12 sm:mb-16 lg:mb-20"
         >
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4 lg:mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-4 lg:mb-6">
             SkyGlider
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl text-secondary">
+          <p className="text-xl sm:text-2xl lg:text-3xl text-gray-700 font-medium">
             Your simple solution for effortless movement, anywhere you sit
           </p>
         </motion.div>
@@ -110,15 +110,15 @@ export default function ProductPage() {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-2xl font-bold text-foreground mb-4">
+              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">
                 About SkyGlider
               </h2>
-              <p className="text-secondary leading-relaxed mb-4">
+              <p className="text-lg lg:text-xl text-gray-700 leading-relaxed mb-4 font-normal">
                 SkyGlider is a simple tool designed to bring effortless movement into your daily routine. 
                 Whether you're a frequent traveler or simply someone who believes in the power of movement, 
                 SkyGlider will allow you to keep your legs moving.
               </p>
-              <p className="text-secondary leading-relaxed">
+              <p className="text-gray-700 leading-relaxed">
                 No complicated setup, no learning curve, no extraordinary maintenance — just fix it on 
                 your shoe and roll with it (literally).
               </p>
@@ -126,31 +126,31 @@ export default function ProductPage() {
 
             {/* What's Included */}
             <div className="bg-blue-50 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-foreground mb-3">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
                 What's Included
               </h3>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <CheckCircleIcon className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-secondary">1x SkyGlider Device</span>
+                  <span className="text-gray-700">1x SkyGlider Device</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircleIcon className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-secondary">Built-in Screw Knob Adjustment Mechanism</span>
+                  <span className="text-gray-700">Built-in Screw Knob Adjustment Mechanism</span>
                 </li>
               </ul>
             </div>
 
             {/* Specifications */}
             <div>
-              <h3 className="text-lg font-bold text-foreground mb-4">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">
                 Specifications
               </h3>
               <div className="space-y-3">
                 {specifications.map((spec) => (
                   <div key={spec.label} className="flex justify-between py-3 border-b border-gray-200">
-                    <span className="font-medium text-foreground">{spec.label}</span>
-                    <span className="text-secondary">{spec.value}</span>
+                    <span className="font-medium text-gray-900">{spec.label}</span>
+                    <span className="text-gray-700">{spec.value}</span>
                   </div>
                 ))}
               </div>
@@ -183,10 +183,10 @@ export default function ProductPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-16 lg:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 lg:mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 lg:mb-6">
               Key Features
             </h2>
-            <p className="text-lg sm:text-xl lg:text-2xl text-secondary">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700">
               Designed for simplicity, built for movement
             </p>
           </motion.div>
@@ -201,10 +201,10 @@ export default function ProductPage() {
                 className="bg-white border border-gray-200 rounded-xl p-8 lg:p-10 hover:shadow-lg transition-shadow duration-300"
               >
                 <feature.icon className="h-12 w-12 lg:h-14 lg:w-14 text-primary mb-6" />
-                <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-base lg:text-lg text-secondary leading-relaxed">
+                <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>
@@ -220,10 +220,10 @@ export default function ProductPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-16 lg:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 lg:mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 lg:mb-6">
               Perfect For
             </h2>
-            <p className="text-lg sm:text-xl lg:text-2xl text-secondary">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700">
               SkyGlider fits into every lifestyle
             </p>
           </motion.div>
@@ -238,10 +238,10 @@ export default function ProductPage() {
                 className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-8 lg:p-10 text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="text-5xl lg:text-6xl mb-6">{useCase.icon}</div>
-                <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
                   {useCase.title}
                 </h3>
-                <p className="text-base lg:text-lg text-secondary leading-relaxed">
+                <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
                   {useCase.description}
                 </p>
               </motion.div>
