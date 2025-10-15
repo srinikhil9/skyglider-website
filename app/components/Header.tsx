@@ -20,29 +20,26 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
       <Container>
-        <nav className="flex items-center justify-between py-4 lg:py-5">
-          {/* Logo/Brand */}
-          <Link href="/" className="text-2xl font-bold text-primary hover:text-primary-dark transition-colors">
+        <nav className="flex items-center justify-between py-4">
+          <Link href="/" className="text-2xl font-bold text-sky-500 hover:text-sky-600 transition-colors">
             SkyGlider
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8 lg:gap-10">
+          <div className="hidden md:flex items-center gap-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-base lg:text-lg text-secondary hover:text-primary transition-colors duration-200 font-medium"
+                className="text-sm font-medium text-slate-700 hover:text-sky-500 transition-colors"
               >
                 {item.name}
               </Link>
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-secondary hover:text-primary transition-colors"
+            className="md:hidden p-2 text-slate-700 hover:text-sky-500 transition-colors"
             aria-label="Toggle mobile menu"
           >
             {mobileMenuOpen ? (
@@ -54,17 +51,16 @@ export default function Header() {
         </nav>
       </Container>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
           <Container>
-            <div className="py-6 space-y-3">
+            <div className="py-4 space-y-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block px-4 py-4 text-base text-secondary hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200 font-medium"
+                  className="block px-4 py-3 text-sm font-medium text-slate-700 hover:text-sky-500 hover:bg-slate-50 rounded-lg transition-colors"
                 >
                   {item.name}
                 </Link>

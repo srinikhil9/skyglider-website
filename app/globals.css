@@ -1,54 +1,12 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-
-:root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --primary: #1d4ed8;
-  --primary-dark: #1e40af;
-  --primary-light: #2563eb;
-  --secondary: #334155;
-  --secondary-light: #475569;
-  --accent: #0891b2;
-  --accent-dark: #0e7490;
-  --accent-light: #06b6d4;
-  --gray-50: #f8fafc;
-  --gray-100: #f1f5f9;
-  --gray-200: #e2e8f0;
-  --gray-800: #1e293b;
-  --gray-900: #0f172a;
-}
+@import "tailwindcss";
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-dark: var(--primary-dark);
-  --color-primary-light: var(--primary-light);
-  --color-secondary: var(--secondary);
-  --color-secondary-light: var(--secondary-light);
-  --color-accent: var(--accent);
-  --color-accent-dark: var(--accent-dark);
-  --color-accent-light: var(--accent-light);
-  --color-gray-50: var(--gray-50);
-  --color-gray-100: var(--gray-100);
-  --color-gray-200: var(--gray-200);
-  --color-gray-800: var(--gray-800);
-  --color-gray-900: var(--gray-900);
-  --font-sans: system-ui, -apple-system, sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --color-primary: #0ea5e9;
+  --color-primary-dark: #0284c7;
+  --color-accent: #0891b2;
+  --color-accent-dark: #0e7490;
+  --color-accent-light: #06b6d4;
 }
 
 html {
@@ -56,66 +14,7 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
-  letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  color: var(--gray-900);
-  letter-spacing: -0.02em;
-}
-
-h1 {
-  margin-bottom: 1.5rem;
-  font-weight: 900;
-  font-size: 2.5rem;
-}
-
-h2 {
-  margin-bottom: 1.25rem;
-  font-weight: 800;
-}
-
-p {
-  margin-bottom: 1.25rem;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-family: inherit;
-}
-
-/* Add breathing room to sections */
-section {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-@media (min-width: 768px) {
-  section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
 }
