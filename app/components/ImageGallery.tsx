@@ -70,13 +70,13 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
 
       {/* Thumbnail Grid */}
       {images.length > 1 && (
-        <div className="grid grid-cols-5 gap-2">
+        <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3">
           {images.map((image, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`aspect-square bg-gray-100 rounded-lg overflow-hidden border-2 transition-all duration-200 hover:border-primary ${
-                index === currentIndex ? 'border-primary ring-2 ring-primary/30' : 'border-transparent'
+              className={`aspect-square bg-gray-100 rounded-xl overflow-hidden border-3 transition-all duration-200 hover:border-primary hover:scale-105 ${
+                index === currentIndex ? 'border-primary ring-4 ring-primary/40 scale-105' : 'border-gray-300'
               }`}
             >
               {image.src ? (
@@ -86,7 +86,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                   className="w-full h-full object-cover"
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center text-2xl">
+                <div className="w-full h-full flex items-center justify-center text-3xl">
                   🛹
                 </div>
               )}

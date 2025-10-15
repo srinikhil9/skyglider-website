@@ -34,34 +34,50 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="py-12">
+    <div className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-blue-50 via-white to-cyan-50">
       <Container>
-        {/* Hero Section */}
+        {/* Hero Image */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16 sm:mb-20"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          <div className="aspect-[21/9] rounded-3xl overflow-hidden shadow-2xl">
+            <img 
+              src="/images/SkyGlider in Airport View 2.jpg" 
+              alt="SkyGlider in use"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </motion.div>
+
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-center mb-20"
+        >
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-8" style={{ color: '#0A0A0A' }}>
             About SkyGlider
           </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-2xl sm:text-3xl lg:text-4xl max-w-4xl mx-auto leading-relaxed font-semibold" style={{ color: '#1A1A1A' }}>
             Bringing effortless movement into every moment of your day
           </p>
         </motion.div>
 
         {/* Brand Story */}
-        <section className="mb-20">
+        <section className="mb-24 sm:mb-28">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+            className="max-w-5xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
-            <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
+            <h2 className="text-4xl sm:text-5xl font-black mb-8" style={{ color: '#0A0A0A' }}>Our Story</h2>
+            <div className="space-y-6 text-xl lg:text-2xl leading-relaxed font-medium" style={{ color: '#1A1A1A' }}>
               <p>
                 In today\'s world, we spend more time sitting than ever before. Whether it\'s long flights, 
                 desk jobs, or study sessions, our bodies crave movement even when we can\'t get up and walk around.
@@ -80,20 +96,20 @@ export default function AboutPage() {
         </section>
 
         {/* Mission Section */}
-        <section className="mb-20">
+        <section className="mb-24 sm:mb-28">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 sm:p-12"
+            className="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-12 sm:p-16 lg:p-20 border-2 border-blue-100 shadow-xl"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Our Mission</h2>
-            <p className="text-xl text-gray-700 leading-relaxed text-center max-w-3xl mx-auto mb-6">
+            <h2 className="text-4xl sm:text-5xl font-black mb-8 text-center" style={{ color: '#0A0A0A' }}>Our Mission</h2>
+            <p className="text-2xl lg:text-3xl leading-relaxed text-center max-w-4xl mx-auto mb-8 font-semibold" style={{ color: '#1A1A1A' }}>
               To bring effortless movement into daily routines and empower people to live more dynamic, 
               active lives—no matter where they are or what they\'re doing.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
+            <p className="text-xl lg:text-2xl leading-relaxed text-center max-w-3xl mx-auto font-medium" style={{ color: '#1A1A1A' }}>
               We envision a world where maintaining an active lifestyle is as simple as sitting down with 
               your SkyGlider.
             </p>
@@ -101,39 +117,39 @@ export default function AboutPage() {
         </section>
 
         {/* First Iteration Callout */}
-        <section className="mb-20">
+        <section className="mb-24 sm:mb-28">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-accent to-accent-light rounded-2xl p-8 sm:p-12 text-white text-center"
+            className="bg-gradient-to-r from-accent to-accent-light rounded-3xl p-12 sm:p-16 text-white text-center shadow-2xl"
           >
-            <div className="text-5xl mb-4">🎉</div>
-            <h2 className="text-3xl font-bold mb-4">
+            <div className="text-7xl mb-6">🎉</div>
+            <h2 className="text-4xl sm:text-5xl font-black mb-6 text-white">
               You're One of the First!
             </h2>
-            <p className="text-xl mb-4 opacity-90 max-w-2xl mx-auto">
+            <p className="text-2xl lg:text-3xl mb-6 text-white max-w-3xl mx-auto leading-relaxed font-medium">
               Congratulations! You\'re among the first to use SkyGlider. This is our initial iteration, 
               and we\'re so grateful for your support and trust.
             </p>
-            <p className="text-lg opacity-90">
+            <p className="text-xl text-white font-medium">
               We look forward to your feedback in shaping future versions!
             </p>
           </motion.div>
         </section>
 
         {/* Pricing Philosophy */}
-        <section className="mb-20">
+        <section className="mb-24 sm:mb-28">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+            className="max-w-5xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Pricing Philosophy</h2>
-            <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
+            <h2 className="text-4xl sm:text-5xl font-black mb-8" style={{ color: '#0A0A0A' }}>Our Pricing Philosophy</h2>
+            <div className="space-y-6 text-xl lg:text-2xl leading-relaxed font-medium" style={{ color: '#1A1A1A' }}>
               <p>
                 We set SkyGlider at the price of a coffee because we believe movement should be accessible 
                 to everyone. We\'re not focused on maximizing profits—we\'re focused on maximizing impact.

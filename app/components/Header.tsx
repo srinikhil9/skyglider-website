@@ -18,11 +18,11 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/98 backdrop-blur-md border-b border-gray-200 shadow-sm">
       <Container>
         <nav className="flex items-center justify-between py-4 lg:py-5">
           {/* Logo/Brand */}
-          <Link href="/" className="text-2xl font-bold text-primary hover:text-primary-dark transition-colors">
+          <Link href="/" className="text-2xl lg:text-3xl font-black text-primary hover:text-primary-dark transition-colors">
             SkyGlider
           </Link>
 
@@ -32,7 +32,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-base lg:text-lg text-secondary hover:text-primary transition-colors duration-200 font-medium"
+                className="text-base lg:text-lg text-gray-900 hover:text-primary transition-colors duration-200 font-semibold"
               >
                 {item.name}
               </Link>
@@ -42,13 +42,13 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-secondary hover:text-primary transition-colors"
+            className="md:hidden p-2 text-gray-900 hover:text-primary transition-colors"
             aria-label="Toggle mobile menu"
           >
             {mobileMenuOpen ? (
-              <XMarkIcon className="h-6 w-6" />
+              <XMarkIcon className="h-7 w-7" />
             ) : (
-              <Bars3Icon className="h-6 w-6" />
+              <Bars3Icon className="h-7 w-7" />
             )}
           </button>
         </nav>
@@ -58,13 +58,13 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
           <Container>
-            <div className="py-6 space-y-3">
+            <div className="py-6 space-y-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block px-4 py-4 text-base text-secondary hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200 font-medium"
+                  className="block px-4 py-4 text-base text-gray-900 hover:text-primary hover:bg-blue-50 rounded-lg transition-colors duration-200 font-semibold"
                 >
                   {item.name}
                 </Link>

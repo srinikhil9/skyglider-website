@@ -29,9 +29,9 @@ export default function Button({
   const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
   
   const variantStyles = {
-    primary: 'bg-primary text-white hover:bg-primary-dark focus:ring-primary shadow-md hover:shadow-lg hover:scale-105 active:scale-95',
-    secondary: 'bg-secondary text-white hover:bg-slate-600 focus:ring-secondary shadow-md hover:shadow-lg hover:scale-105 active:scale-95',
-    outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary hover:scale-105 active:scale-95',
+    primary: 'bg-primary text-white hover:bg-primary-dark hover:text-white focus:ring-primary shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 font-bold',
+    secondary: 'bg-secondary text-white hover:bg-gray-700 hover:text-white focus:ring-secondary shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 font-bold',
+    outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary hover:scale-105 active:scale-95 font-bold',
   };
   
   const sizeStyles = {
