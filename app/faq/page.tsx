@@ -152,7 +152,7 @@ export default function FAQPage() {
   ];
 
   return (
-    <div className="py-12">
+    <div className="py-12 bg-white">
       <Container>
         {/* Hero Section */}
         <motion.div
@@ -161,11 +161,11 @@ export default function FAQPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-black tracking-tighter mb-6">
             Frequently Asked Questions
           </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Find answers to common questions about SkyGlider. Can't find what you're looking for? 
+          <p className="text-xl text-black/60 max-w-3xl mx-auto leading-relaxed">
+            Find answers to common questions about SkyGlider. Can't find what you're looking for?
             Feel free to contact us!
           </p>
         </motion.div>
@@ -179,7 +179,7 @@ export default function FAQPage() {
               animate={categoriesInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
             >
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-black text-black tracking-tighter mb-6">
                 {category.title}
               </h2>
               <div className="space-y-4">
@@ -203,28 +203,28 @@ export default function FAQPage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mt-20 bg-gradient-to-r from-primary to-blue-600 rounded-2xl p-8 sm:p-12 text-center text-white"
+          className="mt-20 bg-black rounded-2xl p-8 sm:p-12 text-center text-white"
         >
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="text-4xl sm:text-5xl font-black tracking-tighter mb-4">
             Still Have Questions?
           </h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-white/70 max-w-2xl mx-auto">
             We're here to help! Reach out to us and we'll get back to you as soon as possible.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
+            <Button
               href="/contact"
               variant="primary"
               size="large"
-              className="bg-white text-primary hover:bg-gray-100"
+              className="bg-white text-black hover:bg-gray-100"
             >
               Contact Us
             </Button>
-            <Button 
+            <Button
               href="/how-to-use"
               variant="outline"
               size="large"
-              className="border-white text-white hover:bg-white hover:text-primary"
+              className="border-white text-white hover:bg-white hover:text-black"
             >
               How to Use Guide
             </Button>

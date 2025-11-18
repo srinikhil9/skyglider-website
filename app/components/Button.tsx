@@ -29,9 +29,9 @@ export default function Button({
   const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
 
   const variantStyles = {
-    primary: 'bg-sky-500 text-white hover:bg-sky-600 focus:ring-sky-500 shadow-md hover:shadow-lg',
-    secondary: 'bg-slate-600 text-white hover:bg-slate-700 focus:ring-slate-600 shadow-md hover:shadow-lg',
-    outline: 'border-2 border-sky-500 text-sky-500 hover:bg-sky-500 hover:text-white focus:ring-sky-500',
+    primary: 'bg-white text-black hover:bg-gray-100 focus:ring-white shadow-md hover:shadow-xl',
+    secondary: 'bg-black text-white border-2 border-white hover:bg-white hover:text-black focus:ring-white shadow-md hover:shadow-xl',
+    outline: 'border-2 border-white text-white hover:bg-white hover:text-black focus:ring-white',
   };
 
   const sizeStyles = {

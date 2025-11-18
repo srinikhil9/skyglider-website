@@ -54,7 +54,7 @@ export default function HowToUsePage() {
   ];
 
   return (
-    <div className="py-12">
+    <div className="py-12 bg-white">
       <Container>
         {/* Hero Section */}
         <motion.div
@@ -63,11 +63,11 @@ export default function HowToUsePage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-black tracking-tighter mb-6">
             Getting Started with SkyGlider
           </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Follow these simple steps to start bringing effortless movement into your daily routine. 
+          <p className="text-xl text-black/60 max-w-3xl mx-auto leading-relaxed">
+            Follow these simple steps to start bringing effortless movement into your daily routine.
             No complicated setup required!
           </p>
         </motion.div>
@@ -88,14 +88,14 @@ export default function HowToUsePage() {
                 {/* Step Content */}
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold">
+                    <div className="flex-shrink-0 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-xl font-bold">
                       {step.number}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                      <h3 className="text-2xl sm:text-3xl font-black text-black tracking-tight mb-3">
                         {step.title}
                       </h3>
-                      <p className="text-gray-700 leading-relaxed text-lg">
+                      <p className="text-black/60 leading-relaxed text-lg">
                         {step.description}
                       </p>
                     </div>
@@ -104,10 +104,10 @@ export default function HowToUsePage() {
 
                 {/* Step Visual */}
                 <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  <div className="aspect-square bg-gradient-to-br from-blue-50 to-white rounded-2xl flex items-center justify-center border-2 border-gray-200">
+                  <div className="aspect-square bg-white border-2 border-black/10 rounded-2xl flex items-center justify-center">
                     <div className="text-center">
                       <div className="text-8xl mb-4">{step.icon}</div>
-                      <p className="text-gray-700 font-medium">Step {step.number} Illustration</p>
+                      <p className="text-black/60 font-medium">Step {step.number} Illustration</p>
                     </div>
                   </div>
                 </div>
@@ -122,11 +122,11 @@ export default function HowToUsePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={tipsInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 sm:p-12"
+            className="bg-white border border-black/10 rounded-2xl p-8 sm:p-12"
           >
             <div className="flex items-center gap-3 mb-6">
-              <LightBulbIcon className="h-8 w-8 text-accent" />
-              <h2 className="text-3xl font-bold text-gray-900">
+              <LightBulbIcon className="h-8 w-8 text-black" />
+              <h2 className="text-3xl sm:text-4xl font-black text-black tracking-tight">
                 Tips for Best Experience
               </h2>
             </div>
@@ -139,8 +139,8 @@ export default function HowToUsePage() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="flex items-start gap-3"
                 >
-                  <CheckIcon className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700 text-lg leading-relaxed">{tip}</span>
+                  <CheckIcon className="h-6 w-6 text-black flex-shrink-0 mt-0.5" />
+                  <span className="text-black/60 text-lg leading-relaxed">{tip}</span>
                 </motion.li>
               ))}
             </ul>
@@ -154,24 +154,24 @@ export default function HowToUsePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-8 sm:p-12"
+            className="bg-white border-2 border-black/10 rounded-2xl p-8 sm:p-12"
           >
             <div className="flex items-center gap-3 mb-6">
-              <ExclamationTriangleIcon className="h-8 w-8 text-amber-600" />
-              <h2 className="text-3xl font-bold text-gray-900">
+              <ExclamationTriangleIcon className="h-8 w-8 text-black" />
+              <h2 className="text-3xl sm:text-4xl font-black text-black tracking-tight">
                 Safety Guidelines
               </h2>
             </div>
             <ul className="space-y-4 mb-6">
               {safetyGuidelines.map((guideline, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-amber-600 rounded-full flex-shrink-0 mt-2"></div>
-                  <span className="text-gray-700 text-lg leading-relaxed">{guideline}</span>
+                  <div className="w-2 h-2 bg-black rounded-full flex-shrink-0 mt-2"></div>
+                  <span className="text-black/60 text-lg leading-relaxed">{guideline}</span>
                 </li>
               ))}
             </ul>
-            <p className="text-sm text-gray-700 italic border-t border-amber-200 pt-6">
-              <strong>Important:</strong> SkyGlider is a tool for movement and leg comfort during long periods 
+            <p className="text-sm text-black/60 italic border-t border-black/10 pt-6">
+              <strong>Important:</strong> SkyGlider is a tool for movement and leg comfort during long periods
               of sedentariness, not a medical device. Natural, fluid movement works best.
             </p>
           </motion.div>
@@ -186,13 +186,13 @@ export default function HowToUsePage() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl font-black text-black tracking-tight mb-6">
               Watch It in Action
             </h2>
-            <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center border-2 border-gray-300">
+            <div className="aspect-video bg-white border-2 border-black/10 rounded-2xl flex items-center justify-center">
               <div className="text-center">
                 <div className="text-6xl mb-4">🎥</div>
-                <p className="text-gray-700 font-medium text-lg">Demo Video Coming Soon</p>
+                <p className="text-black/60 font-medium text-lg">Demo Video Coming Soon</p>
               </div>
             </div>
           </motion.div>
@@ -204,28 +204,28 @@ export default function HowToUsePage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-primary to-blue-600 rounded-2xl p-8 sm:p-12 text-center text-white"
+          className="bg-black rounded-2xl p-8 sm:p-12 text-center text-white"
         >
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="text-4xl sm:text-5xl font-black tracking-tighter mb-4">
             Still Have Questions?
           </h2>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl mb-8 text-white/70">
             Check out our FAQ page for answers to common questions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
+            <Button
               href="/faq"
               variant="primary"
               size="large"
-              className="bg-white text-primary hover:bg-gray-100"
+              className="bg-white text-black hover:bg-gray-100"
             >
               View FAQ
             </Button>
-            <Button 
+            <Button
               href="/contact"
               variant="outline"
               size="large"
-              className="border-white text-white hover:bg-white hover:text-primary"
+              className="border-white text-white hover:bg-white hover:text-black"
             >
               Contact Us
             </Button>

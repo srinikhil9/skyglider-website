@@ -102,7 +102,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="py-12">
+    <div className="py-12 bg-white">
       <Container>
         {/* Hero Section */}
         <motion.div
@@ -111,10 +111,10 @@ export default function ContactPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-black tracking-tighter mb-6">
             Get in Touch
           </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-black/60 max-w-3xl mx-auto leading-relaxed">
             Have a question, feedback, or just want to say hi? We'd love to hear from you!
           </p>
         </motion.div>
@@ -126,14 +126,14 @@ export default function ContactPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
+            <div className="bg-white border border-black/10 rounded-2xl p-8 shadow-lg">
               {status === 'success' ? (
                 <div className="text-center py-12">
                   <CheckCircleIcon className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-2xl font-bold text-black mb-3">
                     Message Sent Successfully!
                   </h3>
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-black/60 mb-6">
                     Thank you for reaching out. We'll get back to you within 24-48 hours.
                   </p>
                   <Button onClick={() => setStatus('idle')} variant="primary">
@@ -144,7 +144,7 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Field */}
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label htmlFor="name" className="block text-sm font-semibold text-black mb-2">
                       Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -153,8 +153,8 @@ export default function ContactPage() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors ${
-                        errors.name ? 'border-red-500' : 'border-gray-300'
+                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors ${
+                        errors.name ? 'border-red-500' : 'border-black/10'
                       }`}
                       placeholder="Your name"
                     />
@@ -165,7 +165,7 @@ export default function ContactPage() {
 
                   {/* Email Field */}
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label htmlFor="email" className="block text-sm font-semibold text-black mb-2">
                       Email <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -174,8 +174,8 @@ export default function ContactPage() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors ${
-                        errors.email ? 'border-red-500' : 'border-gray-300'
+                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors ${
+                        errors.email ? 'border-red-500' : 'border-black/10'
                       }`}
                       placeholder="your.email@example.com"
                     />
@@ -186,7 +186,7 @@ export default function ContactPage() {
 
                   {/* Subject Field */}
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label htmlFor="subject" className="block text-sm font-semibold text-black mb-2">
                       Subject
                     </label>
                     <select
@@ -194,7 +194,7 @@ export default function ContactPage() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
+                      className="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors"
                     >
                       <option value="General Inquiry">General Inquiry</option>
                       <option value="Product Question">Product Question</option>
@@ -205,7 +205,7 @@ export default function ContactPage() {
 
                   {/* Message Field */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label htmlFor="message" className="block text-sm font-semibold text-black mb-2">
                       Message <span className="text-red-500">*</span>
                     </label>
                     <textarea
@@ -214,8 +214,8 @@ export default function ContactPage() {
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors resize-none ${
-                        errors.message ? 'border-red-500' : 'border-gray-300'
+                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors resize-none ${
+                        errors.message ? 'border-red-500' : 'border-black/10'
                       }`}
                       placeholder="Tell us what's on your mind..."
                     />
@@ -258,19 +258,19 @@ export default function ContactPage() {
             className="space-y-8"
           >
             {/* Alternative Contact Methods */}
-            <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="bg-white border border-black/10 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-black mb-6">
                 Other Ways to Reach Us
               </h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <EnvelopeIcon className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                  <EnvelopeIcon className="h-6 w-6 text-black flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-semibold text-gray-900 mb-1">Email</p>
+                    <p className="font-semibold text-black mb-1">Email</p>
                     <a
                       href="mailto:hello@theskyglider.com"
-                      className="text-primary hover:text-primary-dark transition-colors"
+                      className="text-black/60 hover:text-black transition-colors"
                     >
                       hello@theskyglider.com
                     </a>
@@ -280,12 +280,12 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4">
                   <div className="text-2xl">📱</div>
                   <div>
-                    <p className="font-semibold text-gray-900 mb-1">Social Media</p>
+                    <p className="font-semibold text-black mb-1">Social Media</p>
                     <a
                       href="https://www.tiktok.com/@skyglider"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary hover:text-primary-dark transition-colors"
+                      className="text-black/60 hover:text-black transition-colors"
                     >
                       Follow us on TikTok
                     </a>
@@ -295,20 +295,20 @@ export default function ContactPage() {
             </div>
 
             {/* Response Time */}
-            <div className="bg-gradient-to-r from-primary to-blue-600 rounded-2xl p-8 text-white">
+            <div className="bg-black rounded-2xl p-8 text-white">
               <h3 className="text-xl font-bold mb-3">Response Time</h3>
-              <p className="text-lg opacity-90">
-                We typically respond within 24-48 hours during business days. 
+              <p className="text-lg text-white/70">
+                We typically respond within 24-48 hours during business days.
                 Your message is important to us!
               </p>
             </div>
 
             {/* FAQ Link */}
-            <div className="bg-amber-50 border border-amber-200 rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+            <div className="bg-white border border-black/10 rounded-2xl p-8">
+              <h3 className="text-xl font-bold text-black mb-3">
                 Looking for Quick Answers?
               </h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-black/60 mb-4">
                 Check out our FAQ page for answers to commonly asked questions.
               </p>
               <Button href="/faq" variant="outline">

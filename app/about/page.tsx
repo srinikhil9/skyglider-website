@@ -34,7 +34,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="py-12">
+    <div className="py-12 bg-white">
       <Container>
         {/* Hero Section */}
         <motion.div
@@ -43,10 +43,10 @@ export default function AboutPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-black tracking-tighter mb-6">
             About SkyGlider
           </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-black/60 max-w-3xl mx-auto leading-relaxed">
             Bringing effortless movement into every moment of your day
           </p>
         </motion.div>
@@ -60,19 +60,19 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
-            <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
+            <h2 className="text-4xl sm:text-5xl font-black text-black tracking-tighter mb-6">Our Story</h2>
+            <div className="space-y-4 text-lg text-black/60 leading-relaxed">
               <p>
-                In today\'s world, we spend more time sitting than ever before. Whether it\'s long flights, 
-                desk jobs, or study sessions, our bodies crave movement even when we can\'t get up and walk around.
+                In today's world, we spend more time sitting than ever before. Whether it's long flights,
+                desk jobs, or study sessions, our bodies crave movement even when we can't get up and walk around.
               </p>
               <p>
-                That\'s where SkyGlider comes in. We created a simple, portable tool that lets you keep your 
-                legs moving no matter where you are. No gym membership required, no complicated setup, no 
+                That's where SkyGlider comes in. We created a simple, portable tool that lets you keep your
+                legs moving no matter where you are. No gym membership required, no complicated setup, no
                 learning curve—just effortless movement at your fingertips (or rather, at your feet).
               </p>
               <p>
-                We believe that staying active shouldn\'t be complicated or expensive. Movement is a fundamental 
+                We believe that staying active shouldn't be complicated or expensive. Movement is a fundamental
                 human need, and SkyGlider makes it accessible to everyone.
               </p>
             </div>
@@ -86,15 +86,15 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 sm:p-12"
+            className="bg-black rounded-2xl p-8 sm:p-12"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Our Mission</h2>
-            <p className="text-xl text-gray-700 leading-relaxed text-center max-w-3xl mx-auto mb-6">
-              To bring effortless movement into daily routines and empower people to live more dynamic, 
-              active lives—no matter where they are or what they\'re doing.
+            <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tighter mb-6 text-center">Our Mission</h2>
+            <p className="text-xl text-white/70 leading-relaxed text-center max-w-3xl mx-auto mb-6">
+              To bring effortless movement into daily routines and empower people to live more dynamic,
+              active lives—no matter where they are or what they're doing.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">
-              We envision a world where maintaining an active lifestyle is as simple as sitting down with 
+            <p className="text-lg text-white/70 leading-relaxed text-center max-w-2xl mx-auto">
+              We envision a world where maintaining an active lifestyle is as simple as sitting down with
               your SkyGlider.
             </p>
           </motion.div>
@@ -107,17 +107,17 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-accent to-accent-light rounded-2xl p-8 sm:p-12 text-white text-center"
+            className="bg-black rounded-2xl p-8 sm:p-12 text-white text-center"
           >
             <div className="text-5xl mb-4">🎉</div>
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl font-black tracking-tighter mb-4">
               You're One of the First!
             </h2>
-            <p className="text-xl mb-4 opacity-90 max-w-2xl mx-auto">
-              Congratulations! You\'re among the first to use SkyGlider. This is our initial iteration, 
-              and we\'re so grateful for your support and trust.
+            <p className="text-xl mb-4 text-white/70 max-w-2xl mx-auto">
+              Congratulations! You're among the first to use SkyGlider. This is our initial iteration,
+              and we're so grateful for your support and trust.
             </p>
-            <p className="text-lg opacity-90">
+            <p className="text-lg text-white/70">
               We look forward to your feedback in shaping future versions!
             </p>
           </motion.div>
@@ -132,18 +132,18 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Pricing Philosophy</h2>
-            <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
+            <h2 className="text-4xl sm:text-5xl font-black text-black tracking-tighter mb-6">Our Pricing Philosophy</h2>
+            <div className="space-y-4 text-lg text-black/60 leading-relaxed">
               <p>
-                We set SkyGlider at the price of a coffee because we believe movement should be accessible 
-                to everyone. We\'re not focused on maximizing profits—we\'re focused on maximizing impact.
+                We set SkyGlider at the price of a coffee because we believe movement should be accessible
+                to everyone. We're not focused on maximizing profits—we're focused on maximizing impact.
               </p>
               <p>
-                Sure, you could spend the same amount on a coffee that lasts 20 minutes. Or you could invest 
+                Sure, you could spend the same amount on a coffee that lasts 20 minutes. Or you could invest
                 in SkyGlider and enjoy the benefits of movement for years to come.
               </p>
               <p>
-                That\'s the kind of value we\'re committed to delivering: simple, affordable, and genuinely 
+                That's the kind of value we're committed to delivering: simple, affordable, and genuinely
                 beneficial to your daily life.
               </p>
             </div>
@@ -158,8 +158,8 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+            <h2 className="text-4xl sm:text-5xl font-black text-black tracking-tighter mb-4">Our Values</h2>
+            <p className="text-xl text-black/60 max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
           </motion.div>
@@ -171,13 +171,13 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={valuesInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300"
+                className="bg-white border border-black/10 rounded-xl p-8 hover:border-black/30 transition-all duration-300"
               >
-                <value.icon className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <value.icon className="h-12 w-12 text-black mb-4" />
+                <h3 className="text-xl font-bold text-black mb-3 tracking-tight">
                   {value.title}
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-black/60 leading-relaxed">
                   {value.description}
                 </p>
               </motion.div>
@@ -194,18 +194,18 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">What\'s Next</h2>
-            <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
+            <h2 className="text-4xl sm:text-5xl font-black text-black tracking-tighter mb-6">What's Next</h2>
+            <div className="space-y-4 text-lg text-black/60 leading-relaxed">
               <p>
-                This is just the beginning. We have exciting plans for future versions of SkyGlider, 
+                This is just the beginning. We have exciting plans for future versions of SkyGlider,
                 including potential new features, enhanced materials, and even expanded product lines.
               </p>
               <p>
-                But here\'s the thing: we\'re not building this alone. Your feedback, your ideas, and your 
+                But here's the thing: we're not building this alone. Your feedback, your ideas, and your
                 experiences with SkyGlider will directly shape what comes next.
               </p>
               <p>
-                We\'re committed to continuous improvement and innovation, always with the goal of making 
+                We're committed to continuous improvement and innovation, always with the goal of making
                 movement more accessible and effortless for everyone.
               </p>
             </div>
@@ -218,29 +218,29 @@ export default function AboutPage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-primary to-blue-600 rounded-2xl p-8 sm:p-12 text-center text-white"
+          className="bg-black rounded-2xl p-8 sm:p-12 text-center text-white"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-4xl sm:text-5xl font-black tracking-tighter mb-4">
             Help Shape the Future of SkyGlider
           </h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            We genuinely want to hear from you. Your feedback, suggestions, and ideas are invaluable 
+          <p className="text-xl mb-8 text-white/70 max-w-2xl mx-auto">
+            We genuinely want to hear from you. Your feedback, suggestions, and ideas are invaluable
             to us as we continue to evolve SkyGlider.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
+            <Button
               href="/contact"
               variant="primary"
               size="large"
-              className="bg-white text-primary hover:bg-gray-100"
+              className="bg-white text-black hover:bg-gray-100"
             >
               Send Us Feedback
             </Button>
-            <Button 
+            <Button
               href="/product"
               variant="outline"
               size="large"
-              className="border-white text-white hover:bg-white hover:text-primary"
+              className="border-white text-white hover:bg-white hover:text-black"
             >
               Learn More About SkyGlider
             </Button>

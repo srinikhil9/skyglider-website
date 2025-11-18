@@ -45,20 +45,20 @@ export default function HomePage() {
   ];
 
   return (
-    <div>
-      <section className="relative bg-gradient-to-br from-sky-50 via-cyan-50 to-white py-20 lg:py-32">
+    <div className="bg-black">
+      <section className="relative bg-black py-20 lg:py-32">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl lg:text-6xl font-black text-slate-900 mb-6 leading-tight tracking-tight">
-                Move Effortlessly,
-                <span className="text-sky-500 block mt-2"> Anywhere You Sit</span>
+              <h1 className="text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-8 leading-tight tracking-tighter">
+                Move
+                <span className="block mt-1">Effortlessly</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-slate-600 mb-8 leading-relaxed max-w-2xl">
+              <p className="text-xl lg:text-2xl text-white/70 mb-10 leading-relaxed max-w-2xl">
                 A simple tool designed to bring effortless movement into your daily routine.
                 Keep your body in motion, no matter where you are.
               </p>
@@ -86,7 +86,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+              <div className="aspect-square rounded-2xl overflow-hidden border border-white/10">
                 <img
                   src="/images/Men_s Casual Shoe with SG.jpg"
                   alt="SkyGlider on casual shoe"
@@ -98,18 +98,18 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section id="benefits" className="py-20 lg:py-28 bg-white" ref={benefitsRef}>
+      <section id="benefits" className="py-20 lg:py-32 bg-white" ref={benefitsRef}>
         <Container>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={benefitsInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4 tracking-tight">
+            <h2 className="text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-6 tracking-tighter">
               Why SkyGlider?
             </h2>
-            <p className="text-xl lg:text-2xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl lg:text-2xl text-black/60 max-w-3xl mx-auto">
               Simple, effective, and designed for your dynamic lifestyle
             </p>
           </motion.div>
@@ -121,13 +121,13 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={benefitsInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="bg-white border border-black/10 rounded-xl p-10 hover:border-black/30 hover:-translate-y-1 transition-all duration-300"
               >
-                <benefit.icon className="h-14 w-14 text-sky-500 mb-6" />
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                <benefit.icon className="h-12 w-12 text-black mb-6 stroke-2" />
+                <h3 className="text-2xl font-bold text-black mb-4 tracking-tight">
                   {benefit.title}
                 </h3>
-                <p className="text-base text-slate-600 leading-relaxed">
+                <p className="text-base text-black/60 leading-relaxed">
                   {benefit.description}
                 </p>
               </motion.div>
@@ -136,7 +136,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="py-20 lg:py-24 bg-gradient-to-r from-cyan-500 to-sky-600">
+      <section className="py-20 lg:py-32 bg-black border-y border-white/10">
         <Container>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -145,46 +145,47 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center text-white max-w-4xl mx-auto"
           >
-            <div className="text-7xl mb-6">☕</div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white tracking-tight">
+            <div className="text-7xl mb-8">☕</div>
+            <h2 className="text-5xl lg:text-6xl xl:text-7xl font-black mb-8 text-white tracking-tighter">
               All at the price of a coffee
             </h2>
-            <p className="text-xl opacity-95 leading-relaxed text-white">
+            <p className="text-xl lg:text-2xl text-white/70 leading-relaxed">
               But delivering something much greater: an opportunity to keep your body in motion
             </p>
           </motion.div>
         </Container>
       </section>
 
-      <section className="py-20 lg:py-28 bg-slate-50" ref={featuresRef}>
+      <section className="py-20 lg:py-32 bg-white" ref={featuresRef}>
         <Container>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={featuresInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-4 tracking-tight">
+            <h2 className="text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-6 tracking-tighter">
               How It Works
             </h2>
-            <p className="text-xl lg:text-2xl text-slate-600 max-w-3xl mx-auto">
-              Four simple steps to get moving
+            <p className="text-xl lg:text-2xl text-black/60 max-w-3xl mx-auto">
+              Simplicity in every detail
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 30 }}
                 animate={featuresInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-white border border-black/10 rounded-xl p-10 hover:border-black/30 transition-all duration-300"
               >
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                <div className="text-6xl font-black text-black/10 mb-4">{index + 1}</div>
+                <h3 className="text-2xl font-bold text-black mb-4 tracking-tight">
                   {feature.title}
                 </h3>
-                <p className="text-base text-slate-600 leading-relaxed">
+                <p className="text-base text-black/60 leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>
@@ -192,14 +193,14 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <Button href="/how-to-use" variant="primary" size="large">
+            <Button href="/how-to-use" variant="secondary" size="large">
               See Full Guide
             </Button>
         </div>
         </Container>
       </section>
 
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-sky-600 via-cyan-600 to-sky-700 text-white">
+      <section className="py-20 lg:py-32 bg-black text-white">
         <Container>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -208,10 +209,10 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white tracking-tight">
+            <h2 className="text-5xl lg:text-6xl xl:text-7xl font-black mb-8 text-white tracking-tighter">
               Ready to Start Moving?
             </h2>
-            <p className="text-xl mb-10 opacity-95 leading-relaxed text-white">
+            <p className="text-xl lg:text-2xl mb-12 text-white/70 leading-relaxed">
               Join the first wave of SkyGlider users and take a step towards a more dynamic lifestyle.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -219,7 +220,7 @@ export default function HomePage() {
                 href="https://www.tiktok.com/@skyglider"
                 variant="primary"
                 size="large"
-                className="bg-white text-sky-600 hover:bg-slate-50 w-full sm:w-auto"
+                className="w-full sm:w-auto"
               >
                 Shop Now on TikTok
               </Button>
@@ -227,7 +228,7 @@ export default function HomePage() {
                 href="/product"
                 variant="outline"
                 size="large"
-                className="border-2 border-white text-white hover:bg-white hover:text-sky-600 w-full sm:w-auto"
+                className="w-full sm:w-auto"
               >
                 Learn More About Product
               </Button>
