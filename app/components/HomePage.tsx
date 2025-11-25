@@ -86,10 +86,13 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="aspect-square rounded-2xl overflow-hidden border border-white/10">
-                <img
-                  src="/images/Men_s Casual Shoe with SG.jpg"
-                  alt="SkyGlider on casual shoe"
+              <div className="aspect-square rounded-2xl overflow-hidden border border-white/10 bg-black">
+                <video
+                  src="/videos/HOME PAGE SHOT - SkyGlider Moving on its Own.mov"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   className="w-full h-full object-cover"
                 />
               </div>

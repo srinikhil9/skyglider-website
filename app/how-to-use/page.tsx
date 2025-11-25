@@ -16,25 +16,25 @@ export default function HowToUsePage() {
       number: 1,
       title: 'Position the Device',
       description: 'Place SkyGlider under the front part of your shoe or foot. Make sure it sits comfortably beneath the ball of your foot.',
-      icon: '👟',
+      video: '/videos/Adjusting SkyGlider with Shoe.mov',
     },
     {
       number: 2,
       title: 'Secure the Fit',
       description: 'Adjust the width for your shoe or foot using the built-in screw knob mechanism until snug but comfortable. It should feel secure without being tight.',
-      icon: '🔧',
+      video: '/videos/Close-Up of Shoe with SkyGlider Adjustment.mov',
     },
     {
       number: 3,
       title: 'Test Stability',
       description: 'Gently rock your foot to ensure a secure fit before full use. The device should stay firmly in place without sliding.',
-      icon: '⚖️',
+      video: '/videos/Function of SkyGlider from SideView in Chair.mov',
     },
     {
       number: 4,
       title: 'Use It!',
       description: 'Sit comfortably with your feet flat on the ground and SkyGlider under your forefoot. Roll your foot back and forth or laterally in a smooth motion, feeling the ease of movement.',
-      icon: '🎯',
+      video: '/videos/Function of SkyGlider on Foot (many movements).mov',
     },
   ];
 
@@ -104,11 +104,15 @@ export default function HowToUsePage() {
 
                 {/* Step Visual */}
                 <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  <div className="aspect-square bg-white border-2 border-black/10 rounded-2xl flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-8xl mb-4">{step.icon}</div>
-                      <p className="text-black/60 font-medium">Step {step.number} Illustration</p>
-                    </div>
+                  <div className="aspect-video bg-black rounded-2xl overflow-hidden border border-white/10">
+                    <video
+                      src={step.video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </motion.div>
@@ -174,27 +178,6 @@ export default function HowToUsePage() {
               <strong>Important:</strong> SkyGlider is a tool for movement and leg comfort during long periods
               of sedentariness, not a medical device. Natural, fluid movement works best.
             </p>
-          </motion.div>
-        </section>
-
-        {/* Video Placeholder */}
-        <section className="mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <h2 className="text-3xl sm:text-4xl font-black text-black tracking-tight mb-6">
-              Watch It in Action
-            </h2>
-            <div className="aspect-video bg-white border-2 border-black/10 rounded-2xl flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl mb-4">🎥</div>
-                <p className="text-black/60 font-medium text-lg">Demo Video Coming Soon</p>
-              </div>
-            </div>
           </motion.div>
         </section>
 
