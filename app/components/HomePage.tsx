@@ -141,21 +141,46 @@ export default function HomePage() {
 
       <section className="py-20 lg:py-32 bg-black border-y border-white/10">
         <Container>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center text-white max-w-4xl mx-auto"
-          >
-            <div className="text-7xl mb-8">☕</div>
-            <h2 className="text-5xl lg:text-6xl xl:text-7xl font-black mb-8 text-white tracking-tighter">
-              All at the price of a coffee
-            </h2>
-            <p className="text-xl lg:text-2xl text-white/70 leading-relaxed">
-              But delivering something much greater: an opportunity to keep your body in motion
-            </p>
-          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Image Side */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="aspect-square rounded-2xl overflow-hidden border border-white/10">
+                <img
+                  src="/images/White SkyGlider with Starbucks Coffee.jpg"
+                  alt="SkyGlider next to Starbucks coffee cup - same price"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+
+            {/* Text Side */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-white"
+            >
+              <div className="text-6xl lg:text-7xl mb-6">☕</div>
+              <h2 className="text-4xl lg:text-5xl xl:text-6xl font-black mb-6 text-white tracking-tighter leading-tight">
+                All at the price of a coffee
+              </h2>
+              <p className="text-xl lg:text-2xl text-white/70 leading-relaxed mb-8">
+                But delivering something much greater: an opportunity to keep your body in motion, every single day.
+              </p>
+              <div className="flex items-center gap-4 text-white/50 text-sm uppercase tracking-wider">
+                <div className="h-px bg-white/20 flex-1"></div>
+                <span>Same Cost, Lasting Value</span>
+                <div className="h-px bg-white/20 flex-1"></div>
+              </div>
+            </motion.div>
+          </div>
         </Container>
       </section>
 
