@@ -282,7 +282,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-black mb-1">Social Media</p>
                     <a
-                      href="https://www.tiktok.com/@skyglider"
+                      href="https://www.tiktok.com/@theskygliderofficial"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-black/60 hover:text-black transition-colors"

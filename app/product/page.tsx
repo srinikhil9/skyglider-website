@@ -74,7 +74,7 @@ export default function ProductPage() {
   ];
 
   return (
-    <div className="py-12 sm:py-16 lg:py-20 bg-white">
+    <div className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-blue-50 to-white">
       <Container>
         {/* Product Header */}
         <motion.div
@@ -83,10 +83,10 @@ export default function ProductPage() {
           transition={{ duration: 0.6 }}
           className="mb-12 sm:mb-16 lg:mb-20"
         >
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-black tracking-tighter mb-4 lg:mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-4 lg:mb-6">
             SkyGlider
           </h1>
-          <p className="text-xl sm:text-2xl lg:text-3xl text-black/60 font-medium">
+          <p className="text-xl sm:text-2xl lg:text-3xl text-gray-700 font-medium">
             Your simple solution for effortless movement, anywhere you sit
           </p>
         </motion.div>
@@ -110,65 +110,65 @@ export default function ProductPage() {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-3xl lg:text-4xl xl:text-5xl font-black text-black tracking-tighter mb-4">
+              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4">
                 About SkyGlider
               </h2>
-              <p className="text-lg lg:text-xl text-black/60 leading-relaxed mb-4 font-normal">
-                SkyGlider is a simple tool designed to bring effortless movement into your daily routine.
-                Whether you're a frequent traveler or simply someone who believes in the power of movement,
+              <p className="text-lg lg:text-xl text-gray-700 leading-relaxed mb-4 font-normal">
+                SkyGlider is a simple tool designed to bring effortless movement into your daily routine. 
+                Whether you're a frequent traveler or simply someone who believes in the power of movement, 
                 SkyGlider will allow you to keep your legs moving.
               </p>
-              <p className="text-black/60 leading-relaxed">
-                No complicated setup, no learning curve, no extraordinary maintenance — just fix it on
+              <p className="text-gray-700 leading-relaxed">
+                No complicated setup, no learning curve, no extraordinary maintenance — just fix it on 
                 your shoe and roll with it (literally).
               </p>
             </div>
 
             {/* What's Included */}
-            <div className="bg-black/5 border border-black/10 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-black mb-3">
+            <div className="bg-blue-50 rounded-xl p-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
                 What's Included
               </h3>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="h-6 w-6 text-black flex-shrink-0 mt-0.5" />
-                  <span className="text-black/60">1x SkyGlider Device</span>
+                  <CheckCircleIcon className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">1x SkyGlider Device</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="h-6 w-6 text-black flex-shrink-0 mt-0.5" />
-                  <span className="text-black/60">Built-in Screw Knob Adjustment Mechanism</span>
+                  <CheckCircleIcon className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Built-in Screw Knob Adjustment Mechanism</span>
                 </li>
               </ul>
             </div>
 
             {/* Specifications */}
             <div>
-              <h3 className="text-lg font-bold text-black mb-4">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">
                 Specifications
               </h3>
               <div className="space-y-3">
                 {specifications.map((spec) => (
-                  <div key={spec.label} className="flex justify-between py-3 border-b border-black/10">
-                    <span className="font-medium text-black">{spec.label}</span>
-                    <span className="text-black/60">{spec.value}</span>
+                  <div key={spec.label} className="flex justify-between py-3 border-b border-gray-200">
+                    <span className="font-medium text-gray-900">{spec.label}</span>
+                    <span className="text-gray-700">{spec.value}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Purchase CTA */}
-            <div className="bg-black rounded-xl p-6 text-white">
+            <div className="bg-gradient-to-r from-primary to-blue-600 rounded-xl p-6 text-white">
               <p className="text-lg font-semibold mb-4">
                 Ready to bring movement into your life?
               </p>
               <Button
-                href="https://www.tiktok.com/@skyglider"
+                href="https://www.tiktok.com/@theskygliderofficial"
                 variant="primary"
-                className="bg-white text-black hover:bg-gray-100 w-full"
+                className="bg-white text-primary hover:bg-gray-100 w-full"
               >
                 Shop Now on TikTok
               </Button>
-              <p className="text-sm mt-3 text-white/70 text-center">
+              <p className="text-sm mt-3 opacity-90 text-center">
                 More platforms coming soon
               </p>
             </div>
@@ -176,17 +176,17 @@ export default function ProductPage() {
         </div>
 
         {/* Key Features Section */}
-        <section ref={featuresRef} className="mb-16 sm:mb-20 lg:mb-28 bg-black/5 rounded-2xl p-12 sm:p-16 lg:p-20">
+        <section ref={featuresRef} className="mb-16 sm:mb-20 lg:mb-28">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={featuresInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-16 lg:mb-20"
           >
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black tracking-tighter mb-4 lg:mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 lg:mb-6">
               Key Features
             </h2>
-            <p className="text-lg sm:text-xl lg:text-2xl text-black/60">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700">
               Designed for simplicity, built for movement
             </p>
           </motion.div>
@@ -198,13 +198,13 @@ export default function ProductPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={featuresInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white border border-black/10 rounded-xl p-8 lg:p-10 hover:border-black/30 transition-all duration-300"
+                className="bg-white border border-gray-200 rounded-xl p-8 lg:p-10 hover:shadow-lg transition-shadow duration-300"
               >
-                <feature.icon className="h-12 w-12 lg:h-14 lg:w-14 text-black mb-6" />
-                <h3 className="text-xl lg:text-2xl font-bold text-black mb-4 tracking-tight">
+                <feature.icon className="h-12 w-12 lg:h-14 lg:w-14 text-primary mb-6" />
+                <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-base lg:text-lg text-black/60 leading-relaxed">
+                <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>
@@ -220,10 +220,10 @@ export default function ProductPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-16 lg:mb-20"
           >
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black tracking-tighter mb-4 lg:mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 lg:mb-6">
               Perfect For
             </h2>
-            <p className="text-lg sm:text-xl lg:text-2xl text-black/60">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700">
               SkyGlider fits into every lifestyle
             </p>
           </motion.div>
@@ -235,13 +235,13 @@ export default function ProductPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={useCasesInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white border border-black/10 rounded-xl p-8 lg:p-10 text-center hover:border-black/30 hover:-translate-y-1 transition-all duration-300"
+                className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-8 lg:p-10 text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="text-5xl lg:text-6xl mb-6">{useCase.icon}</div>
-                <h3 className="text-xl lg:text-2xl font-bold text-black mb-4 tracking-tight">
+                <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
                   {useCase.title}
                 </h3>
-                <p className="text-base lg:text-lg text-black/60 leading-relaxed">
+                <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
                   {useCase.description}
                 </p>
               </motion.div>
@@ -255,28 +255,28 @@ export default function ProductPage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-black rounded-2xl p-8 sm:p-12 lg:p-16 text-center text-white shadow-xl"
+          className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-8 sm:p-12 lg:p-16 text-center text-white shadow-xl"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-4 lg:mb-6 text-white tracking-tighter">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6 text-white">
             Start Your Movement Journey Today
           </h2>
-          <p className="text-lg sm:text-xl lg:text-2xl mb-8 lg:mb-10 text-white/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl lg:text-2xl mb-8 lg:mb-10 opacity-95 max-w-2xl mx-auto leading-relaxed">
             Join the growing community of people choosing to stay active, no matter where they are.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
             <Button
-              href="https://www.tiktok.com/@skyglider"
+              href="https://www.tiktok.com/@theskygliderofficial"
               variant="primary"
               size="large"
-              className="bg-white text-black hover:bg-gray-100 w-full sm:w-auto"
+              className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto"
             >
               Shop on TikTok
             </Button>
-            <Button
+            <Button 
               href="/how-to-use"
               variant="outline"
               size="large"
-              className="border-2 border-white text-white hover:bg-white hover:text-black w-full sm:w-auto"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 w-full sm:w-auto"
             >
               Learn How to Use
             </Button>

@@ -64,7 +64,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
-                  href="https://www.tiktok.com/@skyglider"
+                  href="https://www.tiktok.com/@theskygliderofficial"
                   variant="primary"
                   size="large"
                 >
@@ -245,7 +245,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                href="https://www.tiktok.com/@skyglider"
+                href="https://www.tiktok.com/@theskygliderofficial"
                 variant="primary"
                 size="large"
                 className="w-full sm:w-auto"
