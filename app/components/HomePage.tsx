@@ -46,58 +46,55 @@ export default function HomePage() {
 
   return (
     <div className="bg-black">
-      <section className="relative bg-black py-20 lg:py-32">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-8 leading-tight tracking-tighter">
-                Move
-                <span className="block mt-1">Effortlessly</span>
-              </h1>
-              <p className="text-xl lg:text-2xl text-white/70 mb-10 leading-relaxed max-w-2xl">
-                A simple tool designed to bring effortless movement into your daily routine.
-                Keep your body in motion, no matter where you are.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  href="https://www.tiktok.com/@theskygliderofficial"
-                  variant="primary"
-                  size="large"
-                >
-                  Shop on TikTok
-                </Button>
-                <Button
-                  href="#benefits"
-                  variant="outline"
-                  size="large"
-                >
-                  Learn More
-                </Button>
-              </div>
-            </motion.div>
+      {/* Hero Section with Video Background */}
+      <section className="relative h-screen min-h-[600px] max-h-[900px] overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0">
+          <video
+            src="/videos/HOME PAGE SHOT - SkyGlider Moving on its Own.mov"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="aspect-square rounded-2xl overflow-hidden border border-white/10 bg-black">
-                <video
-                  src="/videos/HOME PAGE SHOT - SkyGlider Moving on its Own.mov"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </motion.div>
-          </div>
+        {/* Content Overlay */}
+        <Container className="relative h-full flex items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="max-w-3xl"
+          >
+            <h1 className="text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-8 leading-tight tracking-tighter">
+              Move
+              <span className="block mt-1">Effortlessly</span>
+            </h1>
+            <p className="text-xl lg:text-2xl text-white/90 mb-10 leading-relaxed">
+              A simple tool designed to bring effortless movement into your daily routine.
+              Keep your body in motion, no matter where you are.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                href="https://www.tiktok.com/@theskygliderofficial"
+                variant="primary"
+                size="large"
+              >
+                Shop on TikTok
+              </Button>
+              <Button
+                href="#benefits"
+                variant="outline"
+                size="large"
+              >
+                Learn More
+              </Button>
+            </div>
+          </motion.div>
         </Container>
       </section>
 
@@ -167,7 +164,6 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="text-white"
             >
-              <div className="text-6xl lg:text-7xl mb-6">☕</div>
               <h2 className="text-4xl lg:text-5xl xl:text-6xl font-black mb-6 text-white tracking-tighter leading-tight">
                 All at the price of a coffee
               </h2>
