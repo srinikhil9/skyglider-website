@@ -145,7 +145,7 @@ export default function ContactPage() {
 
                   {/* reCAPTCHA */}
                   <div className="flex justify-center">
-                    <div className="g-recaptcha" data-sitekey="6LfMYyIsAAAAAPH6Bz6BYXaWB1knyi2zsIdqqPEh"></div>
+                    <div className="g-recaptcha" data-sitekey="6LfMYyIsAAAAABdy4ncvTqIjSmgVvwvUqJUVKnjD"></div>
                   </div>
 
                   {/* General Error Message */}
