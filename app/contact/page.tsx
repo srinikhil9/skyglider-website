@@ -52,40 +52,35 @@ export default function ContactPage() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!validateForm()) {
       return;
     }
 
-    setStatus('loading');
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`[SkyGlider Contact] ${formData.subject}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Subject: ${formData.subject}\n\n` +
+      `Message:\n${formData.message}`
+    );
 
-    try {
-      // Using Formspree - free, reliable form service
-      const response = await fetch('https://formspree.io/f/xjkvodnv', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+    const mailtoLink = `mailto:hello@theskyglider.com?subject=${subject}&body=${body}`;
 
-      if (response.ok) {
-        setStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          subject: 'General Inquiry',
-          message: '',
-        });
-      } else {
-        setStatus('error');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setStatus('error');
-    }
+    // Open user's email client
+    window.location.href = mailtoLink;
+
+    // Show success state
+    setStatus('success');
+    setFormData({
+      name: '',
+      email: '',
+      subject: 'General Inquiry',
+      message: '',
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
