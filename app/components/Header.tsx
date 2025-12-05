@@ -25,7 +25,7 @@ export default function Header() {
             <img
               src="/images/SkyGlider_Transparent_Improved.png"
               alt="SkyGlider Logo"
-              className="h-20 w-auto"
+              className="h-[30px] w-auto"
             />
           </Link>
 
