@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { EnvelopeIcon, CheckCircleIcon, ExclamationCircleIcon } from '@heroicons/react/24/outline';
 import Container from '../components/Container';
 import Button from '../components/Button';
@@ -9,31 +9,6 @@ import { useForm, ValidationError } from '@formspree/react';
 
 export default function ContactPage() {
   const [state, handleSubmit] = useForm("xldqllrv");
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: 'General Inquiry',
-    message: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    handleSubmit(e);
-    if (state.succeeded) {
-      setFormData({
-        name: '',
-        email: '',
-        subject: 'General Inquiry',
-        message: '',
-      });
-    }
-  };
 
   return (
     <div className="py-12 bg-white">
@@ -80,7 +55,7 @@ export default function ContactPage() {
                   </Button>
                 </div>
               ) : (
-                <form onSubmit={handleFormSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Field */}
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-black mb-2">
@@ -90,8 +65,6 @@ export default function ContactPage() {
                       type="text"
                       id="name"
                       name="name"
-                      value={formData.name}
-                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors text-black bg-white"
                       placeholder="Your name"
@@ -113,8 +86,6 @@ export default function ContactPage() {
                       type="email"
                       id="email"
                       name="email"
-                      value={formData.email}
-                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors text-black bg-white"
                       placeholder="your.email@example.com"
@@ -135,8 +106,7 @@ export default function ContactPage() {
                     <select
                       id="subject"
                       name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
+                      defaultValue="General Inquiry"
                       className="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors text-black bg-white"
                     >
                       <option value="General Inquiry">General Inquiry</option>
@@ -155,8 +125,6 @@ export default function ContactPage() {
                       id="message"
                       name="message"
                       rows={6}
-                      value={formData.message}
-                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors resize-none text-black bg-white"
                       placeholder="Tell us what's on your mind..."
