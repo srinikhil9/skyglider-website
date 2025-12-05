@@ -21,8 +21,12 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-black/95 backdrop-blur-sm border-b border-white/10">
       <Container>
         <nav className="flex items-center justify-between py-5">
-          <Link href="/" className="text-2xl font-bold text-white hover:text-gray-300 transition-colors tracking-tight">
-            SkyGlider
+          <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+            <img
+              src="/images/SkyGlider_BlackNWhite.JPG"
+              alt="SkyGlider Logo"
+              className="h-10 w-auto"
+            />
           </Link>
 
           <div className="hidden md:flex items-center gap-10">
