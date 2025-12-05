@@ -74,7 +74,7 @@ export default function ProductPage() {
   ];
 
   return (
-    <div className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-blue-50 to-white">
+    <div className="py-12 sm:py-16 lg:py-20 bg-white">
       <Container>
         {/* Product Header */}
         <motion.div
@@ -125,17 +125,17 @@ export default function ProductPage() {
             </div>
 
             {/* What's Included */}
-            <div className="bg-blue-50 rounded-xl p-6">
+            <div className="bg-black/5 rounded-xl p-6 border border-black/10">
               <h3 className="text-lg font-bold text-gray-900 mb-3">
                 What's Included
               </h3>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <CheckCircleIcon className="h-6 w-6 text-black flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700">1x SkyGlider Device</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <CheckCircleIcon className="h-6 w-6 text-black flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700">Built-in Screw Knob Adjustment Mechanism</span>
                 </li>
               </ul>
@@ -157,18 +157,18 @@ export default function ProductPage() {
             </div>
 
             {/* Purchase CTA */}
-            <div className="bg-gradient-to-r from-primary to-blue-600 rounded-xl p-6 text-white">
+            <div className="bg-black rounded-xl p-6 text-white border border-white/10">
               <p className="text-lg font-semibold mb-4">
                 Ready to bring movement into your life?
               </p>
               <Button
                 href="https://www.tiktok.com/@theskygliderofficial"
                 variant="primary"
-                className="bg-white text-primary hover:bg-gray-100 w-full"
+                className="w-full"
               >
                 Shop Now on TikTok
               </Button>
-              <p className="text-sm mt-3 opacity-90 text-center">
+              <p className="text-sm mt-3 text-white/80 text-center">
                 More platforms coming soon
               </p>
             </div>
@@ -200,7 +200,7 @@ export default function ProductPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white border border-gray-200 rounded-xl p-8 lg:p-10 hover:shadow-lg transition-shadow duration-300"
               >
-                <feature.icon className="h-12 w-12 lg:h-14 lg:w-14 text-primary mb-6" />
+                <feature.icon className="h-12 w-12 lg:h-14 lg:w-14 text-black mb-6" />
                 <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
                   {feature.title}
                 </h3>
@@ -235,7 +235,7 @@ export default function ProductPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={useCasesInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-8 lg:p-10 text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="bg-white border border-gray-200 rounded-xl p-8 lg:p-10 text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="text-5xl lg:text-6xl mb-6">{useCase.icon}</div>
                 <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
@@ -255,12 +255,12 @@ export default function ProductPage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-8 sm:p-12 lg:p-16 text-center text-white shadow-xl"
+          className="bg-black rounded-2xl p-8 sm:p-12 lg:p-16 text-center text-white shadow-xl border border-white/10"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6 text-white">
             Start Your Movement Journey Today
           </h2>
-          <p className="text-lg sm:text-xl lg:text-2xl mb-8 lg:mb-10 opacity-95 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl lg:text-2xl mb-8 lg:mb-10 text-white/90 max-w-2xl mx-auto leading-relaxed">
             Join the growing community of people choosing to stay active, no matter where they are.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
@@ -268,15 +268,15 @@ export default function ProductPage() {
               href="https://www.tiktok.com/@theskygliderofficial"
               variant="primary"
               size="large"
-              className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto"
+              className="w-full sm:w-auto"
             >
               Shop on TikTok
             </Button>
-            <Button 
+            <Button
               href="/how-to-use"
-              variant="outline"
+              variant="secondary"
               size="large"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 w-full sm:w-auto"
+              className="w-full sm:w-auto"
             >
               Learn How to Use
             </Button>
