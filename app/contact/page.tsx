@@ -5,105 +5,32 @@ import { EnvelopeIcon, CheckCircleIcon, ExclamationCircleIcon } from '@heroicons
 import Container from '../components/Container';
 import Button from '../components/Button';
 import { motion } from 'framer-motion';
-
-interface FormData {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
-
-interface FormErrors {
-  name?: string;
-  email?: string;
-  message?: string;
-}
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState<FormData>({
+  const [state, handleSubmit] = useForm("xldqllrv");
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: 'General Inquiry',
     message: '',
   });
-  
-  const [errors, setErrors] = useState<FormErrors>({});
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-
-  const validateForm = (): boolean => {
-    const newErrors: FormErrors = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!validateForm()) {
-      return;
-    }
-
-    setStatus('loading');
-
-    try {
-      // Use FormData instead of JSON for Formspree
-      const formDataToSend = new FormData();
-      formDataToSend.append('name', formData.name);
-      formDataToSend.append('email', formData.email);
-      formDataToSend.append('subject', formData.subject);
-      formDataToSend.append('message', formData.message);
-
-      const response = await fetch('https://formspree.io/f/xldqllrv', {
-        method: 'POST',
-        body: formDataToSend,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        setStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          subject: 'General Inquiry',
-          message: '',
-        });
-      } else {
-        setStatus('error');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setStatus('error');
-    }
-  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
-    // Clear error when user starts typing
-    if (errors[e.target.name as keyof FormErrors]) {
-      setErrors({
-        ...errors,
-        [e.target.name]: undefined,
+  };
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    handleSubmit(e);
+    if (state.succeeded) {
+      setFormData({
+        name: '',
+        email: '',
+        subject: 'General Inquiry',
+        message: '',
       });
     }
   };
@@ -134,7 +61,7 @@ export default function ContactPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="bg-white border border-black/10 rounded-2xl p-8 shadow-lg">
-              {status === 'success' ? (
+              {state.succeeded ? (
                 <div className="text-center py-12">
                   <CheckCircleIcon className="h-16 w-16 text-green-500 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-black mb-3">
@@ -143,12 +70,17 @@ export default function ContactPage() {
                   <p className="text-black/60 mb-6">
                     Thank you for reaching out. We'll get back to you within 24-48 hours.
                   </p>
-                  <Button onClick={() => setStatus('idle')} variant="primary">
+                  <Button
+                    onClick={() => {
+                      window.location.reload();
+                    }}
+                    variant="primary"
+                  >
                     Send Another Message
                   </Button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleFormSubmit} className="space-y-6">
                   {/* Name Field */}
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-black mb-2">
@@ -160,14 +92,16 @@ export default function ContactPage() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors text-black bg-white ${
-                        errors.name ? 'border-red-500' : 'border-black/10'
-                      }`}
+                      required
+                      className="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors text-black bg-white"
                       placeholder="Your name"
                     />
-                    {errors.name && (
-                      <p className="mt-1 text-sm text-red-500">{errors.name}</p>
-                    )}
+                    <ValidationError
+                      prefix="Name"
+                      field="name"
+                      errors={state.errors}
+                      className="mt-1 text-sm text-red-500"
+                    />
                   </div>
 
                   {/* Email Field */}
@@ -181,14 +115,16 @@ export default function ContactPage() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors text-black bg-white ${
-                        errors.email ? 'border-red-500' : 'border-black/10'
-                      }`}
+                      required
+                      className="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors text-black bg-white"
                       placeholder="your.email@example.com"
                     />
-                    {errors.email && (
-                      <p className="mt-1 text-sm text-red-500">{errors.email}</p>
-                    )}
+                    <ValidationError
+                      prefix="Email"
+                      field="email"
+                      errors={state.errors}
+                      className="mt-1 text-sm text-red-500"
+                    />
                   </div>
 
                   {/* Subject Field */}
@@ -221,23 +157,25 @@ export default function ContactPage() {
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors resize-none text-black bg-white ${
-                        errors.message ? 'border-red-500' : 'border-black/10'
-                      }`}
+                      required
+                      className="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors resize-none text-black bg-white"
                       placeholder="Tell us what's on your mind..."
                     />
-                    {errors.message && (
-                      <p className="mt-1 text-sm text-red-500">{errors.message}</p>
-                    )}
+                    <ValidationError
+                      prefix="Message"
+                      field="message"
+                      errors={state.errors}
+                      className="mt-1 text-sm text-red-500"
+                    />
                   </div>
 
-                  {/* Error Message */}
-                  {status === 'error' && (
+                  {/* General Error Message */}
+                  {state.errors && Object.keys(state.errors).length > 0 && !state.succeeded && (
                     <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-start gap-3">
                       <ExclamationCircleIcon className="h-6 w-6 text-red-500 flex-shrink-0" />
                       <div>
                         <p className="font-semibold text-red-800">Failed to send message</p>
-                        <p className="text-sm text-red-600">Please try again later or email us directly.</p>
+                        <p className="text-sm text-red-600">Please check your inputs and try again.</p>
                       </div>
                     </div>
                   )}
@@ -247,10 +185,10 @@ export default function ContactPage() {
                     type="submit"
                     variant="primary"
                     size="large"
-                    disabled={status === 'loading'}
+                    disabled={state.submitting}
                     className="w-full"
                   >
-                    {status === 'loading' ? 'Sending...' : 'Send Message'}
+                    {state.submitting ? 'Sending...' : 'Send Message'}
                   </Button>
                 </form>
               )}
@@ -353,5 +291,3 @@ export default function ContactPage() {
     </div>
   );
 }
-
-
