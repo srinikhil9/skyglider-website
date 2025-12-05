@@ -62,7 +62,8 @@ export default function ContactPage() {
     setStatus('loading');
 
     try {
-      const response = await fetch('/api/contact', {
+      // Using Formspree - free, reliable form service
+      const response = await fetch('https://formspree.io/f/xjkvodnv', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -153,7 +154,7 @@ export default function ContactPage() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors text-black bg-white ${
                         errors.name ? 'border-red-500' : 'border-black/10'
                       }`}
                       placeholder="Your name"
@@ -174,7 +175,7 @@ export default function ContactPage() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors text-black bg-white ${
                         errors.email ? 'border-red-500' : 'border-black/10'
                       }`}
                       placeholder="your.email@example.com"
@@ -194,7 +195,7 @@ export default function ContactPage() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors"
+                      className="w-full px-4 py-3 border border-black/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors text-black bg-white"
                     >
                       <option value="General Inquiry">General Inquiry</option>
                       <option value="Product Question">Product Question</option>
@@ -214,7 +215,7 @@ export default function ContactPage() {
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors resize-none ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition-colors resize-none text-black bg-white ${
                         errors.message ? 'border-red-500' : 'border-black/10'
                       }`}
                       placeholder="Tell us what's on your mind..."
