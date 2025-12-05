@@ -23,9 +23,9 @@ export default function Header() {
         <nav className="flex items-center justify-between py-5">
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
             <img
-              src="/images/SkyGlider_BlackNWhite.JPG"
+              src="/images/SkyGlider_Transparent_Improved.png"
               alt="SkyGlider Logo"
-              className="h-10 w-auto"
+              className="h-20 w-auto"
             />
           </Link>
 
