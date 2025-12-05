@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Script from 'next/script';
 import { EnvelopeIcon, CheckCircleIcon, ExclamationCircleIcon } from '@heroicons/react/24/outline';
 import Container from '../components/Container';
 import Button from '../components/Button';
@@ -12,13 +11,8 @@ export default function ContactPage() {
   const [state, handleSubmit] = useForm("xldqllrv");
 
   return (
-    <>
-      <Script
-        src="https://www.google.com/recaptcha/api.js"
-        strategy="lazyOnload"
-      />
-      <div className="py-12 bg-white">
-        <Container>
+    <div className="py-12 bg-white">
+      <Container>
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -143,11 +137,6 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  {/* reCAPTCHA */}
-                  <div className="flex justify-center">
-                    <div className="g-recaptcha" data-sitekey="6LfMYyIsAAAAABdy4ncvTqIjSmgVvwvUqJUVKnjD"></div>
-                  </div>
-
                   {/* General Error Message */}
                   {state.errors && Object.keys(state.errors).length > 0 && !state.succeeded && (
                     <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-start gap-3">
@@ -267,7 +256,6 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </Container>
-      </div>
-    </>
+    </div>
   );
 }
